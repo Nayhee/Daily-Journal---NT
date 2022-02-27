@@ -1,0 +1,31 @@
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #42234c;
+}
+header img {
+    height: 75px;
+    width: 110px;
+}
+header h1 {
+    color: #ff3640;
+}
+
+.formContainer {
+    width: 35%;
+    background-color: beige;
+    margin: 1px;
+    display: flex;
+    flex-direction: column;
+}
+
+.submitButton {
+    width: 25%;
+    display: flex;
+    margin: auto;
+}
+
+.dateAndMoodInput {
+    width: 28%;
+}
