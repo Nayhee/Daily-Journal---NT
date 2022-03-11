@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,41 +10,49 @@
 </head>
 
 <body>
-    <header>         <!--Flex this so that I can do logo, nayhee's journal, logo in a row-->
-        <img src="logo.png" alt="logo"> <!--need to give class and size image-->
+
+    <header>
+        <img src="logo.png" alt="logo">
         <h1>Nayhee's Journal</h1>
     </header>
 
     <main>
+        <form action="">
 
-            <form action=""> 
-                <h2 style="margin-bottom: 5px"> Daily Journal </h2>
-                <fieldset class="formContainer">
-                    <label for="Date">Date:</label>
-                    <input class="dateAndMoodInput" type="date" id="date"> <br>
-                    <label for="mood"> Current Mood:</label>
-                    <select class="dateAndMoodInput" name="mood" id="mood">
-                        <option value="Happy">Happy</option>
-                        <option value="Fine">Fine</option>
-                        <option value="Sad">Sad</option>
-                    </select> <br>
-                    <label for="Concepts Learned">Concepts Learned:</label>
-                    <input type="text" id="Concepts Learned"> <br>
-                    <label for="Journal Entry">Journal Entry:</label>
-                    <input type="text" id="Journal Entry">
-                    <br>
-                    <div class="submitButton">
-                        <input type="submit" value="Submit Entry">
-                    </div>
-                </fieldset> 
-            </form>
-    
+            <h2 style="margin-bottom: 5px"> Daily Journal </h2>
+            <fieldset class="formContainer">
+                <label for="Date">Date:</label>
+                <input class="dateAndMoodInput" type="date" id="date"> <br>
+                <label for="mood"> Current Mood:</label>
+                <select class="dateAndMoodInput" name="mood" id="mood">
+                    <option value="Happy">Happy</option>
+                    <option value="Fine">Fine</option>
+                    <option value="Sad">Sad</option>
+                </select> <br>
+                <label for="Concepts Learned">Concepts Learned:</label>
+                <input type="text" id="Concepts Learned"> <br>
+                <label for="Journal Entry">Journal Entry:</label>
+                <textarea name="" id="Journal Entry" cols="30" rows="3"></textarea>
+                <br>
+                <div class="submitButton">
+                    <input type="submit" value="Submit Entry">
+                </div>
+                <script type="module" src="./scripts/main.js">
+                </script>
+            </fieldset> 
+
+        </form>
+        
+        <section class="entryLog">
+
+        </section>
+            
     </main>
 
     <footer>
 
     </footer>
     
-</body>
+</body >
 
-</html>
+</html >
