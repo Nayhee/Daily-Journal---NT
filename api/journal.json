@@ -1,0 +1,95 @@
+{
+  "entries": [
+    {
+      "id": 1,
+      "date": "02/21/2022",
+      "mood": "Fine",
+      "concept": "HTML & CSS",
+      "JE": "I learned about HTML components and how to make grid layouts with Flexbox in CSS."
+    },
+    {
+      "id": 2,
+      "date": "02/22/2022",
+      "mood": "Fine",
+      "concept": "Javascript Functions",
+      "JE": "I learned about functions; specifically, I learned that functions execute code when called upon, and if a function returns a value, I have to store it in a variable."
+    },
+    {
+      "id": 3,
+      "date": "02/23/2022",
+      "mood": "Happy",
+      "concept": "Git",
+      "JE": "I learned about how GIT is a version control system that lets us manage and keep track of source code history."
+    },
+    {
+      "id": 4,
+      "date": "02/24/2022",
+      "mood": "Happy",
+      "concept": "GitHub",
+      "JE": "I learned about how GitHub is a cloud-based hosting service that lets us manage GIT repositories."
+    },
+    {
+      "date": "03/16/2022",
+      "mood": "Fine",
+      "concept": "Fetch",
+      "JE": "I learned that Fetch is a method in Javascript that is used to request to the server and and load the information in the webpages. It's basically Javascript's way to call to the outside world (API, website, etc) and bring data in. Built into a fetch is a promise.",
+      "id": 5
+    },
+    {
+      "date": "03/15/2022",
+      "mood": "Fine",
+      "concept": "JSON Server",
+      "JE": "I learned that JSON-Server is a tool that allows you to access your data via an HTTP request.",
+      "id": 6
+    },
+    {
+      "date": "03/14/2022",
+      "mood": "Fine",
+      "concept": "API",
+      "JE": "I learned that an API is an application programming interface, that enables controlled interaction between different software programs your company is using. It's a way for developers and other software packages to integrate with your system.",
+      "id": 7
+    },
+    {
+      "date": "03/13/2022",
+      "mood": "Happy",
+      "concept": "JSON",
+      "JE": "I learned that JSON, Javascript Object Notation, is a lightweight format for storing and transporting data. It is often used when data is sent from a server to a web page. Javascript doesn't read JSON, so it has to be parsed for us to use it in Javascript. Parsing turns it from a string into a data structure.",
+      "id": 8
+    },
+    {
+      "date": "03/12/2022",
+      "mood": "Happy",
+      "concept": "Event Objects",
+      "JE": "I learned that an Event Object is returned when you add an Event Listener. The Event Object has a TON of properties, 2 of which we can reference: 1) Target, 2) CurrentTarget.",
+      "id": 9
+    },
+    {
+      "date": "03/11/2022",
+      "mood": "Happy",
+      "concept": "DOM",
+      "JE": "I learned that the DOM is the data representation of the objects that comprise the structure and content of a document on the web. It represents the page so that programs can change the document structure, style, and content. We access items on the DOM by using Query Selector and we change the content of an element on the DOM by using InnerHTML.",
+      "id": 10
+    },
+    {
+      "date": "03/10/2022",
+      "mood": "Happy",
+      "concept": "Postman",
+      "JE": "I learned that Postman is a tool that will allow me to quickly test and make requests on an API without writing all kinds of JS. Using Postman also allows me to test the call to determine the structure of our data. We tell it what kind of format we want on Postman, 'accept: application/json'.",
+      "id": 11
+    },
+    {
+      "date": "2022-03-17",
+      "mood": "Happy",
+      "concept": "Promise.all()",
+      "JE": "Today I learned about Promise.All(), which is a method that takes an iterable of promises as an input and returns a single promise that resolves to an array of the input promises. This returned promise will resolve when all of the input's promises have resolved, or if the input iterable contains no promises. ",
+      "id": 12
+    },
+    {
+      "date": "2022-03-17",
+      "mood": "Happy",
+      "concept": "Promise",
+      "JE": "A Promise is a proxy for a value not necessarily known when the promise is created. It allows you to associate handlers with an asynchronous action's eventual success value or failure reason. This lets asynchronous methods return values like synchronous methods: instead of immediately returning the final value, the asynchronous method returns a promise to supply the value at some point in the future. ",
+      "id": 13
+    }
+  ]
+}

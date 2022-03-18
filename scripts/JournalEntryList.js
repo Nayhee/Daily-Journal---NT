@@ -1,13 +1,10 @@
-import { getJournalEntries } from "./JournalData.js"
-import { JournalEntryComponent } from "./JournalEntry.js"
+import { JournalEntry } from "./JournalEntry.js"
 
-export const EntryListComponent = () => {
-    const entryLog = document.querySelector(".entryLog")
-    const entries = getJournalEntries()
-    let journalHTMLRep = "";
+export const EntryList = (allEntries) => {
+    let journalEntryHTML = "";
 
-    for (const entry of entries) {
-        journalHTMLRep += JournalEntryComponent(entry);
+    for (const entry of allEntries) {
+        journalEntryHTML += JournalEntry(entry);
     }
-    entryLog.innerHTML += `${journalHTMLRep}`;
+    return journalEntryHTML;
 }
