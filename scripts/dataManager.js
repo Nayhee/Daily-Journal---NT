@@ -1,8 +1,16 @@
+let entryCollection = [];
+
+//we dont want to alter the original state of data, so this makes a copy and returns it. 
+export const useEntryCollection = () => {
+    return [...entryCollection];
+}
+
 //fetch call to json server to get all entries. returns parsed array of entries. 
 export const getEntries = () => {
     return fetch("http://localhost:8088/entries")
     .then(response => response.json())
     .then(parsedResponse => {
+        entryCollection = parsedResponse
         return parsedResponse;
     })
 }

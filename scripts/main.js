@@ -15,11 +15,15 @@ const showEntryList = () => {
     })
 }
 
+const clearEntryField = () => {
+//need to write this function to clear upon submit.
+}
+
 const journalElement = document.querySelector(".journal_main")
 
 journalElement.addEventListener("click", event => {
-    event.preventDefault();
     if(event.target.id === "newPost__submit") {
+        event.preventDefault();
         const date = document.querySelector("input[name='postDate']").value 
         const mood = document.querySelector("select[name='mood']").value 
         const concept = document.querySelector("input[name='concept']").value
@@ -32,7 +36,8 @@ journalElement.addEventListener("click", event => {
             JE: JE
         }
         createEntry(entryObj)
-        .then(showForm);
+        .then(showEntryList());
+        // .then(clearEntryField())
     }
 })
 
@@ -46,13 +51,18 @@ journalElement.addEventListener("click", event => {
 
 journalElement.addEventListener("click", event => {
     if(event.target.id.startsWith("edit")) {
-        //code here for edit button.
+        //code here for edit button
+
     }
 });
 
 journalElement.addEventListener("click", event => {
     if(event.target.id.startsWith("delete")) {
         //code here for delete button
+        //maybe...
+        //identify the object the user wants to delete, then 
+        // for(const key in obj) 
+            // delete obj[key] ?
     }
 });
 
