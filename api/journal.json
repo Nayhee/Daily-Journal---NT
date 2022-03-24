@@ -5,14 +5,14 @@
       "date": "02/21/2022",
       "mood": "Fine",
       "concept": "HTML & CSS",
-      "JE": "I learned about HTML components and how to make grid layouts with Flexbox in CSS."
+      "JE": "I learned that there are 2 display values: block and inline. Block elements always start on a new line and take up the full width available, while inline elements do not start on a new line and only take up as much width as neccessary."
     },
     {
       "id": 2,
       "date": "02/22/2022",
       "mood": "Fine",
       "concept": "Javascript Functions",
-      "JE": "I learned about functions; specifically, I learned that functions execute code when called upon, and if a function returns a value, I have to store it in a variable."
+      "JE": "I learned that functions execute code when called upon, and if a function returns a value, store it in a variable."
     },
     {
       "id": 3,
@@ -90,6 +90,13 @@
       "concept": "Promise",
       "JE": "A Promise is a proxy for a value not necessarily known when the promise is created. It allows you to associate handlers with an asynchronous action's eventual success value or failure reason. This lets asynchronous methods return values like synchronous methods: instead of immediately returning the final value, the asynchronous method returns a promise to supply the value at some point in the future. ",
       "id": 13
+    },
+    {
+      "date": "2022-03-23",
+      "mood": "Fine",
+      "concept": "Git Ignore",
+      "JE": "We use a .gitignore file to list files we want GIT to ignore and omit them from being pushed to GitHub. Store the API keys in an object in a settings.js file and then utilize the object in the fetch calls instead of the actual keys.",
+      "id": 14
     }
   ]
 }

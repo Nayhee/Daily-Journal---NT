@@ -8,10 +8,13 @@ export const Form = () => {
                     <option value="Happy">Happy</option>
                     <option value="Fine">Fine</option>
                     <option value="Sad">Sad</option>
+                    <option value="Feeling myself">Feeling Myself</option>
+                    <option value="Not so hot">Not so hot</option>
+                    <option value="Mediocre at best">Mediocre at best</option>
                 </select> <br>
 
                 <label for="Concepts Learned">Concepts Learned:</label>
-                <input name="concept" type="text" id="Concepts Learned"> <br>
+                <input class=conceptInput" name="concept" type="text" id="Concepts Learned"> <br>
 
                 <label for="Journal Entry">Journal Entry:</label>
                 <textarea name="entryText" id="Journal Entry" cols="30" rows="3"></textarea>

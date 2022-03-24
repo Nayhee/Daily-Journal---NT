@@ -15,10 +15,6 @@ const showEntryList = () => {
     })
 }
 
-const clearEntryField = () => {
-//need to write this function to clear upon submit.
-}
-
 const journalElement = document.querySelector(".journal_main")
 
 journalElement.addEventListener("click", event => {
@@ -37,7 +33,6 @@ journalElement.addEventListener("click", event => {
         }
         createEntry(entryObj)
         .then(showEntryList());
-        // .then(clearEntryField())
     }
 })
 
