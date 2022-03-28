@@ -1,8 +1,9 @@
 import { EntryList } from "./JournalEntryList.js";
-import { getEntries, createEntry, useEntryCollection, deleteEntry } from "./dataManager.js";
+import { getEntries, createEntry, useEntryCollection, deleteEntry, getSingleEntry, updateEntry } from "./dataManager.js";
 import { Form } from "./form.js";
 import { populateFilterSection } from "./filterSection.js";
 import { formatDate } from "./helper.js";
+import { EntryEdit } from "./entryEdit.js";
 
 
 // posts the form to the page. 
@@ -39,20 +40,48 @@ journalElement.addEventListener("click", event => {
     }
 })
 
-//logs the ID of the entry that was clicked. 
+
+//edit button
 journalElement.addEventListener("click", event => {
-    if(event.target.id.startsWith("entry")) {
-        //code here 
-        console.log("You have clicked journal entry #",event.target.id.split("--")[1]);
+    if(event.target.id.startsWith("edit")) {
+        const entryID = event.target.id.split("--")[1];
+        getSingleEntry(entryID)
+        .then(response => {
+            showEdit(response);
+        }) 
     }
 });
 
+const showEdit = (entryObj) => {
+    const editElement = document.querySelector(".editSection")    //NOT SURE IF THIS IS THE RIGHT CLASS!!!!
+    editElement.innerHTML = EntryEdit(entryObj);   //EntryEdt prob needs to be edited. 
+}
+
 journalElement.addEventListener("click", event => {
-    if(event.target.id.startsWith("edit")) {
-        //code here for edit button
-        
+    event.preventDefault();
+    if (event.target.id.startsWith("updateEntry")) {
+      const postId = event.target.id.split("__")[1];
+      //collect all the details into an object
+      const title = document.querySelector("input[name='entryTitle']").value
+      const description = document.querySelector("textarea[name='entryDescription']").value
+      const timestamp = document.querySelector("input[name='entryTime']").value
+      
+      const entryObject = {
+        title: title,
+        description: description,
+        userId: getLoggedInUser().id,
+        timestamp: parseInt(timestamp),
+        id: parseInt(postId)
+      }
+      
+      updateEntry(entryObject)
+        .then(response => {
+          showEntryList();
+        })
     }
-});
+  })
+
+
 
 //delete button
 journalElement.addEventListener("click", event => {

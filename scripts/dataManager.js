@@ -35,3 +35,19 @@ export const deleteEntry = (entryID) => {
     })
     .then(response => response.json())
 }
+
+export const getSingleEntry = (entryID) => {
+    return fetch(`http://localhost:8088/entries/${entryID}`)
+    .then(response => response.json())
+}
+
+export const updateEntry = (entryObj) => {
+    return fetch(`http://localhost:8088/entries/${entryObj.id}`, {
+        method: "PUT",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(postObj)
+    })
+        .then(response => response.json())
+}
