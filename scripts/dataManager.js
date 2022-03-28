@@ -26,3 +26,12 @@ export const createEntry = entryObj => {
         .then(response => response.json())
 }
 
+export const deleteEntry = (entryID) => {
+    return fetch(`http://localhost:8088/entries/${entryID}`, {
+        method:"DELETE",
+        headers: {
+            "Content-Type": "application/json"
+        }
+    })
+    .then(response => response.json())
+}

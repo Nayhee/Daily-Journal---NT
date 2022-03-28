@@ -1,6 +1,9 @@
 import { EntryList } from "./JournalEntryList.js";
-import { getEntries, createEntry } from "./dataManager.js";
+import { getEntries, createEntry, useEntryCollection, deleteEntry } from "./dataManager.js";
 import { Form } from "./form.js";
+import { populateFilterSection } from "./filterSection.js";
+import { formatDate } from "./helper.js";
+
 
 // posts the form to the page. 
 const showForm = () => {
@@ -24,7 +27,7 @@ journalElement.addEventListener("click", event => {
         const mood = document.querySelector("select[name='mood']").value 
         const concept = document.querySelector("input[name='concept']").value
         const JE = document.querySelector("textarea[name='entryText']").value 
-
+        
         const entryObj = {
             date: date,
             mood: mood,
@@ -47,17 +50,18 @@ journalElement.addEventListener("click", event => {
 journalElement.addEventListener("click", event => {
     if(event.target.id.startsWith("edit")) {
         //code here for edit button
-
+        
     }
 });
 
+//delete button
 journalElement.addEventListener("click", event => {
     if(event.target.id.startsWith("delete")) {
-        //code here for delete button
-        //maybe...
-        //identify the object the user wants to delete, then 
-        // for(const key in obj) 
-            // delete obj[key] ?
+        const entryID = event.target.id.split("--")[1];
+        deleteEntry(entryID)
+        .then(response => {
+            showEntryList();
+        })
     }
 });
 
@@ -74,8 +78,32 @@ journalElement.addEventListener("click", event => {
 });
 
 
+
+journalElement.addEventListener("change", event => {
+    if(event.target.id === "moodSelection") {
+        const moodSelected = event.target.value;
+        showFilteredEntries(moodSelected);
+    }
+    
+})
+
+const showFilteredEntries = (moodSelected) => {
+    const entryElement = document.querySelector(".entryLog");
+    const filteredEntries = useEntryCollection().filter(singleEntry => {
+        if(singleEntry.mood === moodSelected) {
+            return singleEntry;
+        }
+    })
+    
+    console.log(filteredEntries)
+    entryElement.innerHTML = EntryList(filteredEntries);
+}
+
+
+
 const startJournal = () => {
     showEntryList();
     showForm();
+    populateFilterSection();
 }
 startJournal();

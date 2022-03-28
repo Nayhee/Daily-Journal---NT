@@ -4,7 +4,7 @@ export const JournalEntry = (Entry) => {
         return `
             <section id="entry--${Entry.id}" class="journalEntry" style="background-color:#42234c; border: 3px solid #ff3640; border-radius: 2px">
                 <h3>${Entry.concept}</h3> 
-                <p>${Entry.date} </p>
+                <p><i>${Entry.date}</i> </p>
                 <p>${Entry.JE} </p>
                 <div>
                     <button id="edit--${Entry.id}">Edit</button>
