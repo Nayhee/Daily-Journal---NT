@@ -3,6 +3,7 @@ import { getLoggedInUser } from "./dataManager.js";
 export const JournalEntry = (Entry) => {
 
     let loggedInUser = getLoggedInUser();
+    
     if(loggedInUser.id === Entry.userid) {
         if (Entry.id % 2 === 0) {
             return `

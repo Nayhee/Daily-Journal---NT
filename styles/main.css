@@ -127,3 +127,20 @@ nav h1 {
     justify-content: center;
 }
 
+.bothAllEntryAndMyEntryButtonsDiv {
+    display: flex;
+    color: white;
+}
+
+#allEntriesButton {
+    margin: 5px 10px 5px 0px;
+    padding: 10px;
+    background-color: #ff3640;
+    color: white;
+}
+#myEntriesButton {
+    margin: 5px 5px 5px 0px;
+    padding: 10px;
+    background-color: #42234c;
+    color: white;
+}

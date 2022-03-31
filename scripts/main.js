@@ -6,7 +6,9 @@ import { EntryEdit } from "./entryEdit.js";
 import { NavBar } from "./NavBar.js";
 import { LoginForm } from "./loginForm.js";
 import { RegisterForm } from "./registerForm.js";
-import { showMyList} from "./myEntries.js"
+import { showMyEntries } from "./myEntries.js";
+
+const journalElement = document.querySelector(".journal_main")
 
 const showForm = () => {
     const formElement = document.querySelector(".formContainer");
@@ -23,43 +25,41 @@ const showEntryList = () => {
     })
 }
 
-//make another button for once they are viewing my entries, it pops up below it and says "ALL ENTRIES" so they can go back and forth.
-//in the function all I gota do is call ShowEntryList. 
-
-
-//I ALSO NEED TO ADD THE NAME SOMEHOW FROM THE OBJECT FOR THE MY ENTRIES BUTTON. 
-
 
 let myEntriesButtonDivEl = document.querySelector(".myEntriesButtonDiv");
-
 const showMyEntriesButton = () => {
     myEntriesButtonDivEl.innerHTML = `
     <button id="myEntriesButton">My Entries</button>
-    <br>
-    `
+    <br>`
 }
-//I GOT IT TO SHOW UP AFTER LOGIN, BUT IT DISSAPEARS ON REFRESH.
-const journalElement = document.querySelector(".journal_main")
+let allEntriesButtonDivEl = document.querySelector(".allEntriesButtonDiv")
+const showAllEntriesButton = () => {
+    allEntriesButtonDivEl.innerHTML = `
+    <button id="allEntriesButton">All Entries</button>
+    <br>`
+}
+journalElement.addEventListener("click", event => {
+    if(event.target.id === "allEntriesButton") {
+        showEntryList();
+    }
+})
 
-//THIS PROB NOT DONE YET 
 journalElement.addEventListener("click", event => {
     const entryElement = document.querySelector(".entryLog");
     if (event.target.id === "myEntriesButton") {
-        
+        showAllEntriesButton(); //once the myEntriesButton is clicked, show the AllEntries button so they can toggle back. 
         const userId = getLoggedInUser().id;
         getLoggedInUsersEntries(userId)
         .then(usersEntries => {
-            entryElement.innerHTML = showMyList(usersEntries);
+            entryElement.innerHTML = showMyEntries(usersEntries);
         })
     }
 })
 
 
-
-
-
 journalElement.addEventListener("click", event => {
     if(event.target.id === "newEntry__submit") {
+        // event.preventDefault();
         const date = document.querySelector("input[name='entryDate']").value 
         const mood = document.querySelector("select[name='mood']").value 
         const concept = document.querySelector("input[name='concept']").value
@@ -77,7 +77,6 @@ journalElement.addEventListener("click", event => {
     }
 })
 
-//edit button event listener
 journalElement.addEventListener("click", event => {
     if(event.target.id.startsWith("edit")) {
         const entryID = event.target.id.split("--")[1];
@@ -206,7 +205,8 @@ journalElement.addEventListener("click", event => {
 
 journalElement.addEventListener("click", event => {
     if (event.target.id === "register__submit") {
-      //collect all the details into an object
+        event.preventDefault();
+        //collect all the details into an object
       const userObject = {
         name: document.querySelector("input[name='registerName']").value,
         email: document.querySelector("input[name='registerEmail']").value

@@ -6,14 +6,24 @@
       "id": 1
     },
     {
-      "name": "poopHee",
-      "email": "poop@gmail.com",
+      "name": "boopHee",
+      "email": "boop@gmail.com",
       "id": 2
     },
     {
       "name": "mr random",
       "email": "random@gmail.com",
       "id": 3
+    },
+    {
+      "name": "holly",
+      "email": "holly@gmail.com",
+      "id": 4
+    },
+    {
+      "name": "eric",
+      "email": "eric@gmail.com",
+      "id": 5
     }
   ],
   "entries": [
@@ -136,6 +146,54 @@
       "JE": "Today we altered our getEntries fetch call, adding expand=user, which attaches a user to each entry. So, now when we getEntries, we have the user's Name/Email/Id that created that Entry.",
       "userId": 1,
       "id": 15
+    },
+    {
+      "date": "2022-03-31",
+      "mood": "Sad",
+      "concept": "mr random concept",
+      "JE": "mr random entryyyyyyyyyy",
+      "userId": 3,
+      "id": 16
+    },
+    {
+      "date": "2022-03-31",
+      "mood": "Sad",
+      "concept": "another mr random concept",
+      "JE": "another mr random entry!!!!!!!!!!!",
+      "userId": 3,
+      "id": 17
+    },
+    {
+      "date": "2022-03-31",
+      "mood": "Sad",
+      "concept": "wow a 3rd mr random concept",
+      "JE": "mr random dot com hey how are ya heres the 3rd entryyyyyyy",
+      "userId": 3,
+      "id": 18
+    },
+    {
+      "date": "2022-03-31",
+      "mood": "Sad",
+      "concept": "Local Storage",
+      "JE": "Local Storage is an Object that lets you save key/value pairs in the browser. It stores data with no expiration date. The data is not deleted when the browser is closed.",
+      "userId": 1,
+      "id": 19
+    },
+    {
+      "date": "2022-03-31",
+      "mood": "Happy",
+      "concept": "ssss",
+      "JE": "sssssssssssssss",
+      "userId": 5,
+      "id": 20
+    },
+    {
+      "date": "2022-03-31",
+      "mood": "Sad",
+      "concept": "BUTTON TYPE",
+      "JE": "BUTTON THYPE",
+      "userId": 5,
+      "id": 21
     }
   ]
 }
