@@ -2,20 +2,44 @@ body {
     background-color: #dedede;
 }
 
-header {
+.navigation {
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content:space-between;
     background-color: #42234c;
     border: 3px solid #ff3640;
     border-radius: 5px;
+    margin-bottom: 15px;
 }
-header img {
+
+nav img {
     height: 75px;
     width: 110px;
 }
-header h1 {
+nav h1 {
     color: #ff3640;
+    font-size: 30px;
+}
+
+.navLogoAndTitleContainer {
+    display: flex;
+    flex-direction: row;
+    justify-self: flex-start;
+    align-items: center;
+}
+
+
+.navLoginAndLogoutContainer {
+    display: flex;
+    flex-direction: row;
+    justify-self: flex-start;
+    margin-right: .5em;
+}
+
+.navLoginAndLogoutContainer button {
+    margin: .5em;
+    padding: .5em;
 }
 
 .formContainer {
@@ -28,7 +52,7 @@ header h1 {
 }
 
 .submitButton {
-    width: 32%;
+    width: 25%;
     margin: auto;
     text-align: center;
 }
@@ -59,13 +83,10 @@ header h1 {
     border: 5px dotted yellow;
   }
 
-header {
-      margin-bottom: 15px;
-  }
 
 
 .filterSection {
-    margin: 1em 0px 1em 0px;
+    margin: .2em 0px .2em 0px;
 }
 
 
@@ -77,10 +98,11 @@ header {
     padding: 0px 1em 1em 1em;
     border: 2px solid black;
     background-color: beige;
+    margin: .5em 0px .5em 0px;
 }
 
 .newEntry input {
-    margin: 4px;
+    margin-bottom: 4px;
 }
 
 .newEntry h3 {
@@ -88,17 +110,20 @@ header {
     margin-bottom: 5px;
 }
 
-.updateEntry-UpdateButton {
-    width: 15%;
-    margin: 10px 2px;
-}
+
 
 .editSection {
     margin-bottom: .2em;
 }
 
-.updateAndCancelButtonContainer {
+.updateAndCancelEntryButtons {
+    width: 15%;
+    margin: 10px 2px;
+}
+
+.updateAndCancelEntryButtonContainer {
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
+

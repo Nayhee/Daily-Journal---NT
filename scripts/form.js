@@ -1,7 +1,7 @@
 export const Form = () => {
     return `
                 <label for="Date">Date:</label>
-                <input name="postDate" class="dateAndMoodInput" type="date" id="date"> <br>
+                <input name="entryDate" class="dateAndMoodInput" type="date" id="date"> <br>
                 
                 <label for="mood"> Current Mood:</label>
                 <select class="dateAndMoodInput" name="mood" id="mood">
@@ -17,6 +17,6 @@ export const Form = () => {
                 <textarea name="entryText" id="Journal Entry" cols="30" rows="3"></textarea>
                 <br>
                 
-                <button class="submitButton" id="newPost__submit">Submit Entry</button>
+                <button class="submitButton" id="newEntry__submit">Submit Entry</button>
     `
 }
